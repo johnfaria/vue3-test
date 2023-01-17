@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
 export const CustomerSchema = z.object({
-  id: z.number(),
-  name: z.string(),
-  email: z.string(),
+  id: z.string().nullish(),
+  name: z.string().min(1),
+  email: z.string().min(1),
   active: z.boolean(),
 });
 
