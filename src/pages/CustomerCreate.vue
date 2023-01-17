@@ -5,6 +5,7 @@ import { ref } from 'vue';
 import Button from '../components/Button.vue';
 import { Customer } from '../schemas/customers';
 import { useRouter } from 'vue-router';
+import Checkbox from 'primevue/checkbox';
 
 const router = useRouter();
 const store = useCounterStore();
@@ -20,7 +21,7 @@ const createNewCustomer = (customer: Customer) => {
   const isValid = store.validateCustomer(customer);
   if (isValid) {
     store.createCustomer(customer);
-    router.push({ name: 'HomePage' });
+    router.push({ name: 'CustomerList' });
   }
 };
 
@@ -31,10 +32,27 @@ const addNewProduct = () => {
 
 <template>
   <form class="customer-form" @submit.prevent="createNewCustomer(customer)">
-    <TextInput id="name" v-model="customer.name" label="Nome" type="text" />
-    <TextInput id="name" v-model="customer.email" label="Email" type="email" />
+    <h2 class="title">Cadastro de Cliente</h2>
+    <TextInput
+      id="name"
+      v-model="customer.name"
+      label="Nome do cliente"
+      type="text"
+    />
+    <TextInput
+      id="name"
+      v-model="customer.email"
+      label="Email do cliente"
+      type="email"
+    />
+
+    <div class="field-checkbox">
+      <Checkbox v-model="customer.active" input-id="binary" :binary="true" />
+      <label for="binary">Cliente Ativo?</label>
+    </div>
 
     <div v-if="customer.products.length" class="product-input-group">
+      <h3 class="subtitle">Cadastro de Produtos</h3>
       <div
         v-for="(product, index) in customer.products"
         :key="`product-${index}`"
@@ -46,6 +64,11 @@ const addNewProduct = () => {
           label="Nome do Produto"
           type="text"
         />
+
+        <div class="field-checkbox">
+          <Checkbox v-model="product.active" input-id="binary" :binary="true" />
+          <label for="binary">Produto Ativo?</label>
+        </div>
       </div>
     </div>
     <div class="actions">
@@ -55,27 +78,4 @@ const addNewProduct = () => {
   </form>
 </template>
 
-<style lang="scss" scoped>
-.field * {
-  display: block;
-}
-
-.customer-form {
-  display: grid;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 4px #0003;
-
-  .product-input-group {
-    padding: 1rem;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 4px #0003;
-  }
-
-  .actions {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-</style>
+<style lang="scss" scoped src="./customer_form.scss"></style>

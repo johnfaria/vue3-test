@@ -16,7 +16,9 @@ defineEmits(['update:modelValue']);
       :name="id"
       :value="modelValue"
       v-bind="$attrs"
-      @input="$emit('update:modelValue', $event.target.value)"
+      @input="
+        $emit('update:modelValue', ($event.target as HTMLInputElement).value)
+      "
     />
   </div>
 </template>
@@ -34,6 +36,7 @@ defineEmits(['update:modelValue']);
   }
 
   input {
+    width: 100%;
     height: 2rem;
     border: 1px solid #d8d3d3;
     border-radius: 0.5rem;

@@ -1,7 +1,3 @@
-<script setup lang="ts">
-//
-</script>
-
 <template>
   <button class="btn" v-bind="$attrs">
     <slot></slot>
@@ -13,14 +9,13 @@
   padding: 1rem;
   border: none;
   border-radius: 0.5rem;
-  background-color: #8282df;
+  background-color: #0b7ad1;
   color: #fff;
   text-transform: uppercase;
 
   &:hover {
-    border: 1px solid #8282df;
-    background-color: #fff;
-    color: #8282df;
+    background-color: #7faaca;
+    color: #fff;
   }
 }
 </style>

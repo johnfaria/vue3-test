@@ -1,44 +1,44 @@
 .customer-form {
+  display: grid;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px #0003;
+
+  .field * {
+    display: block;
+  }
+
+  .product-input-group {
     display: grid;
     padding: 1rem;
-    border-radius: 0.5rem;
-    background-color: #fff;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
     box-shadow: 0 2px 4px #0003;
-  
-    .field * {
-      display: block;
-    }
-  
-    .product-input-group {
-      display: grid;
-      padding: 1rem;
-      border-radius: 1rem;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+
+    .title {
       margin-bottom: 1rem;
-      box-shadow: 0 2px 4px #0003;
-      gap: 1rem;
-      grid-template-columns: repeat(3, 1fr);
-  
-      .title {
-        margin-bottom: 1rem;
-      }
-  
-      .subtitle {
-        margin-bottom: 1rem;
-        grid-column: 1 / 4;
-      }
     }
-  
-    .actions {
-      display: flex;
-      justify-content: space-between;
-    }
-  
-    .field-checkbox {
+
+    .subtitle {
       margin-bottom: 1rem;
-  
-      label {
-        margin-left: 0.5rem;
-        font-size: 0.875rem;
-      }
+      grid-column: 1 / 4;
     }
   }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .field-checkbox {
+    margin-bottom: 1rem;
+
+    label {
+      margin-left: 0.5rem;
+      font-size: 0.875rem;
+    }
+  }
+}
