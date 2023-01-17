@@ -1,6 +1,6 @@
 # develop stage
-FROM node:11.1-alpine as develop-stage
+FROM node:16.16-alpine as develop-stage
 WORKDIR /app
 COPY package*.json ./
-RUN yarn install
+RUN npm install -g pnpm
 COPY . .

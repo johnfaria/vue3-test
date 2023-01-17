@@ -1,4 +1,3 @@
-# for local development
 version: '3.8'
 services:
   frontend:
@@ -6,7 +5,7 @@ services:
       context: .
       target: 'develop-stage'
     ports:
-    - '8080:8080'
+    - '5173:5173'
     volumes:
     - '.:/app'
-    command: /bin/sh -c "yarn serve"
+    command: /bin/sh -c "pnpm dev --host"
