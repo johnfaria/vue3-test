@@ -1,0 +1,50 @@
+[
+  {
+    "id": "9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d",
+    "name": "Stevie Wonder",
+    "email": "stevie@email.com",
+    "active": true,
+    "products": [
+      {
+        "name": "Produto 1",
+        "active": false
+      },
+      {
+        "name": "Produto 2",
+        "active": true
+      },
+      {
+        "name": "Produto 3",
+        "active": true
+      }
+    ]
+  },
+  {
+    "id": "81bc7c82-9ed3-4917-8605-efe301c1c7cc",
+    "name": "Michael Jackson",
+    "email": "mj@email.com",
+    "active": true,
+    "products": [
+      {
+        "name": "Produto 1",
+        "active": false
+      },
+      {
+        "name": "Produto 2",
+        "active": true
+      }
+    ]
+  },
+  {
+    "id": "538c3e2c-92d0-4d13-9ab1-8a59fb2f0178",
+    "name": "Elvis Presley",
+    "email": "elvis@email.com",
+    "active": true,
+    "products": [
+      {
+        "name": "Produto 1",
+        "active": false
+      }
+    ]
+  }
+]
