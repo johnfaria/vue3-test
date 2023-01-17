@@ -15,6 +15,7 @@
   border-radius: 0.5rem;
   background-color: #8282df;
   color: #fff;
+  text-transform: uppercase;
 
   &:hover {
     border: 1px solid #8282df;

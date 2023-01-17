@@ -12,6 +12,8 @@
   },
   "dependencies": {
     "pinia": "^2.0.29",
+    "primeicons": "^6.0.1",
+    "primevue": "^3",
     "uuid": "^9.0.0",
     "vue": "^3.2.45",
     "vue-router": "4",

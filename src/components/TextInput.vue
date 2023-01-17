@@ -15,6 +15,7 @@ defineEmits(['update:modelValue']);
       :id="id"
       :name="id"
       :value="modelValue"
+      v-bind="$attrs"
       @input="$emit('update:modelValue', $event.target.value)"
     />
   </div>

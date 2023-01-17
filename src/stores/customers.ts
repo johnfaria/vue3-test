@@ -10,6 +10,7 @@ export const useCounterStore = defineStore('counter', () => {
       name: 'Jon Doe',
       email: 'jondoe@email.com',
       active: true,
+      products: [],
     },
   ]);
 
