@@ -1,10 +1,12 @@
+import { createPinia } from 'pinia';
+import 'primeicons/primeicons.css';
+import PrimeVue from 'primevue/config';
+import 'primevue/resources/primevue.min.css';
+import 'primevue/resources/themes/saga-blue/theme.css';
 import { createApp } from 'vue';
-import './style.scss';
 import App from './App.vue';
 import { router } from './routes/index';
-import { createPinia } from 'pinia';
-import PrimeVue from 'primevue/config';
-import 'primevue/resources/themes/saga-blue/theme.css';
+import './style.scss';
 
 const pinia = createPinia();
 const app = createApp(App);

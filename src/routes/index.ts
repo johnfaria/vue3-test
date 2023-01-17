@@ -1,13 +1,19 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import HomePage from '../pages/HomePage.vue';
+import CustomerList from '../pages/CustomerList.vue';
 import CustomerCreate from '../pages/CustomerCreate.vue';
+import CustomerEdit from '../pages/CustomerEdit.vue';
 
 const routes: RouteRecordRaw[] = [
-  { path: '/', component: HomePage, name: 'HomePage' },
+  { path: '/', component: CustomerList, name: 'CustomerList' },
   {
     path: '/customers/create',
     component: CustomerCreate,
     name: 'CustomerCreate',
+  },
+  {
+    path: '/customers/:id',
+    component: CustomerEdit,
+    name: 'CustomerEdit',
   },
 ];
 
