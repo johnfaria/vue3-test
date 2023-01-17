@@ -13,7 +13,8 @@
   "dependencies": {
     "pinia": "^2.0.29",
     "vue": "^3.2.45",
-    "vue-router": "4"
+    "vue-router": "4",
+    "zod": "^3.20.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.48.2",
